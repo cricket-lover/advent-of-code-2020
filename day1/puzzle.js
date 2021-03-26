@@ -7,21 +7,17 @@ const sumsUp = entries => {
     let product = 1;
     entries.forEach(entry => {
         const first = 2020 - entry;
-        entries.forEach(second => {
-           difference = first - second 
-           if(entries.includes(difference)){
-
+        entries.forEach(element => {
+            difference = first - element 
+            if(entries.includes(difference)){
+                product = entry * element * difference
            }
         })
-        if(entries.includes(first)){
-            second = entry - first;
-            if(entries.includes(second)){
-                product  = entry * first * second;
-            }
-        }
     })
 
     return product;
 }
 
-console.log(entries, sumsUp(entries))
+console.log(entries)
+const restult = sumsUp(entries);
+console.log(restult)
